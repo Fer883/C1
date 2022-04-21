@@ -25,6 +25,17 @@ public class Hotel implements Serializable {
         return m;
     }
 
+    public Cliente dniCli(int DNI){
+        for(int i=0;i<6;i++){
+            for(int j=0;j<5;j++){
+                if(Habitaciones[i][j].getDNI()==DNI){
+                    return Habitaciones[i][j];
+                }
+            }
+        }
+        return null;
+    }
+
     public boolean resHab(Cliente c,int contE, int contB, int contS){
         int contR = contE + contB + contS;
         if(contE>0) {
